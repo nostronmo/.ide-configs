@@ -1,6 +1,0 @@
-package ucsal.oferta.professor.model.exception;
-
-public class ProfessorException extends RuntimeException {
-
-
-}

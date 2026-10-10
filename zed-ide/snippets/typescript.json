@@ -1,0 +1,18 @@
+{
+  "Generate Base Angular Component": {
+    "prefix": "compc",
+    "body": [
+      "import { Component } from '@angular/core';",
+      "",
+      "@Component({",
+      "  selector: 'app-${1:home}',",
+      "  imports: [],",
+      "  templateUrl: './${1:home}.html'",
+      "})",
+      "export class ${1:home} {",
+      "  $0",
+      "}"
+    ],
+    "description": "Create a Basic Angular Component"
+  }
+}

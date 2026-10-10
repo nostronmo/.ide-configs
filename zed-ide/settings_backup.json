@@ -1,0 +1,256 @@
+{
+  "cli_default_open_behavior": "existing_window",
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "base_keymap": "VSCode",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Cappone (eclipse)",
+  },
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "format_on_save": "off",
+  "project_panel": {
+    "hide_hidden": false,
+    "dock": "right",
+    "auto_fold_dirs": true,
+    "folder_icons": true,
+    "indent_guides": {
+      "show": "always",
+    },
+  },
+  "disable_ai": true,
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false,
+  },
+  "file_types": {
+    "GLSL": ["vs", "fs"],
+    "Java": ["java"],
+    "HTML": ["html"],
+  },
+  "languages": {
+    "C": {
+      "format_on_save": "off",
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+          "arguments": ["--style=GNU"],
+        },
+      },
+    },
+    "C++": {
+      "format_on_save": "off",
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+          "arguments": ["--style=GNU"],
+        },
+      },
+    },
+    "Rust": {
+      "format_on_save": "off",
+    },
+    "HTML": {
+      "language_servers": [
+        "vscode-html-language-server",
+        "emmet-language-server",
+        "tailwindcss-language-server",
+      ],
+    },
+    "SCSS": {
+      "language_servers": ["scss-lsp", "tailwindcss-language-server"],
+    },
+    "Angular": {
+      "language_servers": [
+        "tailwindcss-language-server",
+        "vscode-html-language-server",
+        "emmet-language-server",
+        "angular",
+      ],
+      "completions": {
+        "lsp": true,
+      },
+      "formatter": "prettier",
+    },
+    "JavaScript": {
+      "language_servers": ["vtsls", "tailwindcss-language-server", "eslint"],
+      "formatter": "prettier",
+    },
+    "TypeScript": {
+      "language_servers": ["vtsls", "tailwindcss-language-server", "eslint"],
+      "formatter": "prettier",
+    },
+    "TSX": {
+      "language_servers": ["vtsls", "tailwindcss-language-server", "eslint"],
+      "formatter": "prettier",
+    },
+  },
+  "lsp": {
+    "eslint": {
+      "binary": {
+        "path": "node",
+      },
+    },
+    "clangd": {
+      "binary": {
+        "arguments": [
+          "--compile-commands-dir=build",
+          "--all-scopes-completion",
+          "--completion-style=detailed",
+          "--header-insertion=never",
+          "--background-index",
+          "-clang-tidy",
+        ],
+      },
+      /*
+      "initialization_options": {
+        "fallbackFlags": ["-std=c++20"],
+      },
+      */
+    },
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+    "angular": {
+      "initialization_options": {
+        "angularCompilerOptions": {
+          "strictTemplates": true,
+        },
+      },
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": ["cva", "cx", "clsx"],
+        "tailwindCSS": {
+          "includeLanguages": {
+            "Angular": "html",
+            "angular": "html",
+            "html": "html",
+            "javascript": "javascript",
+            "javascriptreact": "javascriptreact",
+            "typescript": "typescript",
+            "typescriptreact": "typescriptreact",
+          },
+          "experimental": {
+            "configFiles": {
+              "src/styles.css": "**/*.html",
+            },
+            "classRegex": [
+              "\\[ngClass\\]=\"([^\"]*)\"",
+              "class=\"([^\"]*)\"",
+              "className=\"([^\"]*)\"",
+            ],
+          },
+          "validate": true,
+          "lint": {
+            "cssConflict": "warning",
+            "invalidApply": "error",
+            "invalidScreen": "error",
+            "invalidVariant": "error",
+            "recommendedVariantOrder": "warning",
+          },
+        },
+      },
+    },
+    "jdtls": {
+      },
+      "initialization_options": {
+        "settings": {
+          "java": {
+            "errors": {
+              "incompleteClasspath": {
+                "severity": "warning",
+              },
+            },
+            "configuration": {
+              "updateBuildConfiguration": "interactive",
+            },
+            "import": {
+              "maven": {
+                "enabled": true,
+              },
+              "exclusions": [
+                "**/node_modules/**",
+                "**/.metadata/**",
+                "**/archetype-resources/**",
+                "**/META-INF/maven/**",
+                "/**/test/**",
+              ],
+            },
+            "jdt": {
+              "ls": {
+                "lombokSupport": {
+                  "enabled": true,
+                },
+              },
+            },
+            "referencesCodeLens": {
+              "enabled": true,
+            },
+            "implementationsCodeLens": {
+              "enabled": true,
+            },
+            "format": {
+              "enabled": true,
+            },
+            "completion": {
+              "favoriteStaticMembers": [
+                "org.junit.Assert.*",
+                "org.junit.Assume.*",
+                "org.junit.jupiter.api.Assertions.*",
+                "org.junit.jupiter.api.Assumptions.*",
+                "org.junit.jupiter.api.DynamicContainer.*",
+                "org.junit.jupiter.api.DynamicTest.*",
+              ],
+              "importOrder": ["java", "javax", "com", "org"],
+            },
+          },
+        },
+      },
+    },
+    "pyright": {
+      "initialization_options": {
+        "python": {
+          "pythonPath": ".venv/bin/python",
+        },
+      },
+    },
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/.DS_Store",
+    "**/node_modules",
+    "**/build",
+    "**/dist",
+    "**/*.pyc",
+    "**/*.lock",
+    "**/secret-folder",
+    "**/compile_commands.json",
+  ],
+}

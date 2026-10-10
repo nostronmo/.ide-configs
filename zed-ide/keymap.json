@@ -11,10 +11,9 @@
       "alt-s": "go_to_line::Toggle",
 
       "ctrl-3": "editor::GoToDefinition",
-      "ctrl-shift-h": "file_finder::Toggle",
       "ctrl-1": "editor::ToggleCodeActions",
       "ctrl-shift-q": "editor::EditLogBreakpoint",
-      "ctrl-4": "editor::SelectAllMatches",
+      "ctrl-2": "editor::SelectAllMatches",
       "ctrl-shift-f12": "editor::GoToDefinitionSplit",
       "ctrl-shift-3": "editor::FindAllReferences",
       "shift-f12": "editor::OpenContextMenu",
@@ -42,10 +41,7 @@
   {
     "context": "Workspace",
     "bindings": {
-      "alt-@": "debug_panel::ToggleFocus",
-
-      "alt-w": "git_panel::ToggleFocus",
-      "alt-e": "outline_panel::ToggleFocus",
+      "ctrl-g": "git_panel::ToggleFocus",
       "alt-q": "project_panel::ToggleFocus",
       "alt-z": "workspace::ToggleLeftDock",
       "ctrl-t": "project_symbols::Toggle",
@@ -120,8 +116,8 @@
       "ctrl-shift-o": "workspace::Open",
       "f12": ["app_menu::OpenApplicationMenu", "Zed"],
 
-      "ctrl-shift-,": "pane::SplitAndMoveLeft",
-      "ctrl-shift-.": "pane::SplitAndMoveRight",
+      "ctrl-alt-,": "pane::SplitAndMoveLeft",
+      "ctrl-alt-.": "pane::SplitAndMoveRight",
       "ctrl-shift-o": "workspace::Open",
       "ctrl-k ctrl-i": "workspace::AddFolderToProject",
       "ctrl-k ctrl-l": "project_panel::RemoveFromProject",
@@ -164,7 +160,6 @@
     "bindings": {
       "ctrl-1": null,
       "ctrl-2": null,
-      "ctrl-3": null,
       "ctrl-4": null,
       "ctrl-5": null,
     },
@@ -221,18 +216,6 @@
     },
   },
   {
-    "context": "ProjectSearchBar",
-    "bindings": {
-      "ctrl-2": "search::ToggleReplace",
-    },
-  },
-  {
-    "context": "ProjectSearchView",
-    "bindings": {
-      "ctrl-2": "search::ToggleReplace",
-    },
-  },
-  {
     "context": "Workspace",
     "bindings": {
       "ctrl-shift-h": null,
@@ -253,11 +236,11 @@
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-2": [
+      "ctrl-alt-f": [
         "pane::DeploySearch",
         {
-          "replace_enabled": true,
-        },
+          "replace_enabled": true
+        }
       ],
     },
   },
@@ -325,7 +308,7 @@
   },
   {
     "bindings": {
-      "ctrl-alt-r": "project_panel::RevealInFileManager",
+      "alt-shift-w": "project_panel::RevealInFileManager",
     },
   },
   {
@@ -494,6 +477,144 @@
     "context": "Editor",
     "unbind": {
       "ctrl-shift-i": "editor::Format"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-<": "zed::OpenSettingsFile"
+    }
+  },
+  {
+    "unbind": {
+      "ctrl-alt-,": "zed::OpenSettingsFile"
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "unbind": {
+      "ctrl-alt-.": "agent::ToggleFastMode"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-z": "editor::ToggleSoftWrap"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "alt-z": "editor::ToggleSoftWrap"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-alt-f": "project_search::ToggleFilters"
+    }
+  },
+  {
+    "context": "ProjectSearchView",
+    "unbind": {
+      "ctrl-alt-f": "project_search::OpenTextFinder"
+    }
+  },
+  {
+    "context": "ProjectSearchBar",
+    "unbind": {
+      "ctrl-alt-f": "project_search::OpenTextFinder"
+    }
+  },
+  {
+    "context": "Welcome",
+    "unbind": {
+      "ctrl-2": [
+        "welcome::OpenRecentProject",
+        1
+      ]
+    }
+  },
+  {
+    "context": "GitPanel",
+    "unbind": {
+      "ctrl-2": "git_panel::ActivateHistoryTab"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "alt-a": "text_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "unbind": {
+      "ctrl-alt-f": "text_finder::Toggle"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "bindings": {
+      "ctrl-alt-a": "picker::ToggleActionsMenu"
+    }
+  },
+  {
+    "context": "Picker > Editor",
+    "unbind": {
+      "ctrl-shift-a": "picker::ToggleActionsMenu"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "unbind": {
+      "ctrl-shift-p": "file_finder::SelectPrevious"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "bindings": {
+      "ctrl-shift-p": "file_finder::SelectPrevious"
+    }
+  },
+  {
+    "context": "FileFinder || FileFinder > Picker > Editor || FileFinder > Picker > menu",
+    "unbind": {
+      "ctrl-shift-p": "file_finder::SelectPrevious"
+    }
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "alt-w": "search::ToggleWholeWord"
+    }
+  },
+  {
+    "context": "AcpThread",
+    "unbind": {
+      "alt-w": "search::ToggleWholeWord"
+    }
+  },
+  {
+    "context": "ThreadsSidebar",
+    "unbind": {
+      "ctrl-g": "agents_sidebar::ToggleThreadHistory"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-e": "debug_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-d": "debug_panel::ToggleFocus"
+    }
+  },
+  {
+    "bindings": {
+      "alt-w": "file_finder::Toggle"
     }
   }
 ]

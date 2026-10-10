@@ -1,9 +1,0 @@
-spring:
-  profiles:
-    active: console, ${PROFILE:dev}
-  application:
-    name: ofertadisciplina
-
-    
-server:
-  port: ${SERVER_PORT:8081}

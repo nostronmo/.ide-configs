@@ -1,5 +1,0 @@
-package com.tom.service.datagen.dto;
-
-public record SchoolRequest() {
-
-}

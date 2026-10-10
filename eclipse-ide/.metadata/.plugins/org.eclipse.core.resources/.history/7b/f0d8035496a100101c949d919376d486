@@ -1,8 +1,0 @@
-package ucsal.oferta.infraestrutura.dto;
-
-public record EquipamentoDTO(
-    String id,
-    String nome,
-    String tipo,
-    String descricao
-    ) {}

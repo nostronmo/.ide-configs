@@ -1,4 +1,0 @@
-@PreDestroy
-public void stopDynamoDb() {
-    dynamodb.stop();
-}

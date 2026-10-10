@@ -1,5 +1,0 @@
-package ucsal.oferta.testcontainers.interfaces;
-
-public @interface ContainerJpaTest {
-
-}

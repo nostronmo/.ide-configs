@@ -1,0 +1,9 @@
+{
+  "Fast Import command": {
+    "prefix": "#in",
+    "body": [
+      "#include"
+    ],
+    "description": "Faster Include command"
+  }
+}

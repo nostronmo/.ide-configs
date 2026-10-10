@@ -1,7 +1,0 @@
-package ucsal.oferta.config;
-
-import org.springframework.boot.test.context.TestConfiguration;
-
-@TestConfigurationpublic class PasswordEncoderConfig {
-
-}
